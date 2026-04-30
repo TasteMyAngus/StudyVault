@@ -340,46 +340,6 @@ Local install steps, run commands, and backend startup behavior are documented i
 
 - `POST /courses/{course_id}/chat`
 
-## Frontend Notes
-
-The current frontend is centered around `frontend/src/App.jsx`, which holds most of the application state and view logic in one file. The main sections in the UI are:
-
-- materials
-- chat
-- study sets
-- quizzes
-- tracking
-
-The styling in `App.css` defines the current StudyVault visual theme:
-
-- indigo to purple gradient background
-- white card surfaces
-- pale blue active states
-- rounded panels and controls
-
-## Current Constraints
-
-The project is functional, but there are a few architectural constraints worth knowing:
-
-- the main frontend UI is still concentrated in a single React component
-- retrieval depends on rebuilding the in-memory FAISS index at startup
-- some generated or auxiliary files exist in the repo root and are not part of the runtime application
-- `frontend/src/components/SettingsUI.tsx` exists in the source tree but is not part of the main app entry flow
-
-## Development Notes
-
-If you are changing the backend:
-
-- router modules should stay thin
-- service modules should hold cross-route business logic
-- `config.py` should continue reading exported settings from environment variables
-- database schema changes belong in `db/schema.py`
-
-If you are changing the frontend:
-
-- `App.jsx` is the main integration point
-- `App.css` defines most of the current application theme
-- any larger frontend refactor should likely begin by splitting `App.jsx` into feature-level components
 
 ## Summary
 
