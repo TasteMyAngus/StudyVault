@@ -24,6 +24,7 @@ from .services.quiz_records import (
     _get_quiz_row,
 )
 from .services.sources import (
+    _build_page_label,
     _build_source_chunk_payload,
     _load_source_chunks,
 )
