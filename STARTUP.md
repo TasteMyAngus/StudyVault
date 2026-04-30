@@ -2,6 +2,16 @@
 
 This file contains the setup and startup steps for running StudyVault locally.
 
+## First Run
+
+Before starting the app for the first time:
+
+1. Copy `.env.example` to `.env`
+2. Review the path values in `.env` and update them for your machine if needed
+3. Replace `OPENAI_API_KEY` with your own OpenAI API key
+
+StudyVault will not be able to use chat, flashcard generation, or quiz generation without a valid API key.
+
 ## Installation
 
 ### Backend Setup
